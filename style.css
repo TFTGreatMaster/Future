@@ -1,0 +1,21 @@
+header {
+  font-weight: bold;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+.column1,
+.column1 th,
+.column1 td {
+  border: 1px solid black;
+  padding: 10px;
+}
+table {
+  border-spacing: 5px;
+}
+
+.table-image td {
+  width: 15rem;
+  height: 10rem;
+  background-image: url("https://images.unsplash.com/photo-1617850136763-06bc0a9a089c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80") ;
+  background-size: cover;
+}
