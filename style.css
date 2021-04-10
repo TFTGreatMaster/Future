@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.selector--ex1 p {
+  color: blue;
+}
+.selector {
+  font-size: 50px;
+}
+.selector--ex2 p:first-child {
+  color: green;
+}
+.selector--ex3 p
+ {
+  color: blue;
+}
+.selector--ex3 h2:first-of-type {
+  color: blue;
+}
+
+.text-ex .div1 {
+  color: black;
+  width: 200px;
+  height: 200px;
+  background-color: wheat;
+  font-size: 30px;
+  text-align: center;
+  line-height: 200px;
+  border: 3px solid black;
+}
+.text-ex .div2 {
+  color: black;
+  width: 200px;
+  height: 200px;
+  background-color: wheat;
+  font-size: 30px;
+  text-align: center;
+  line-height: 200px;
+  border: 3px solid blue;
+}
+.text-ex .div3 {
+  color: black;
+  width: 200px;
+  height: 200px;
+  background-color: wheat;
+  font-size: 30px;
+  text-align: center;
+  line-height: 200px;
+  border: 3px solid blue;
+  border-radius: 20px;
+}
+.text-ex .text {
+  background: wheat;
+  width: 800px;
+  border: 44px dashed green;
+  padding: 40px 45px;
+  margin: 50px;
+}
+.text-ex #a > div {
+  background: wheat;
+  margin: 50px 60px 50px 40px;
+  /*  code vào phần bên dưới   */
+}
+
+.text-ex #a {
+  /* Không code vào đây */
+  border: 1px solid black;
+}
+.text-ex .display1 {
+  display: inline;
+  background-color: red;
+}
+.text-ex #span1 {
+  background: red;
+}
+.text-ex #span2 {
+  background: yellow;
+  display: inline-block;
+  width: 500px;
+}
+.text-ex .span1 {
+  background: red;
+  display: block;
+}
+
+.text-ex .span2 {
+  background: blue;
+}
+.text-ex .span3 {
+  background-color: wheat;
+  color: red;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+}
