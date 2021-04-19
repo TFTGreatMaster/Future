@@ -1,0 +1,214 @@
+$primary: #fb4c53;
+$secondary: #291866;
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+}
+input,
+textarea,
+button,
+select {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  outline: none;
+}
+body {
+  background-image: linear-gradient(to left, #bdc7e0, #fff);
+  min-height: 100vh;
+  padding: 5rem;
+}
+.signup {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to left, #e9f0ff, #fff 50%);
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 5px rgba($color: #000000, $alpha: 0.1);
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem;
+  &__content,
+  &__image {
+    min-width: calc(50% - 4rem);
+  }
+  &__content {
+    padding: 5rem;
+  }
+  &__heading {
+    color: #291864;
+    font-size: 5.5rem;
+    font-weight: bold;
+    color: $secondary;
+  }
+  &__caption {
+    color: $primary;
+    font-weight: bold;
+    font-size: 1.6rem;
+    position: relative;
+    margin: 5rem 0;
+    padding-left: 8rem;
+    &::before {
+      content: "";
+      width: 5rem;
+      height: 0.2rem;
+      background-color: $primary;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+  &__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &-social {
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem 0;
+    &__item {
+      padding: 1.5rem 2.5rem;
+      border: 1px solid #eee;
+      border-radius: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      color: $secondary;
+      width: calc(50% - 1.5rem);
+    }
+    &__icon {
+      padding-right: 2rem;
+    }
+  }
+  &-form {
+    &__label {
+      color: $secondary;
+      display: inline-block;
+      margin-bottom: 1rem;
+      transform: translateX(1rem);
+      cursor: pointer;
+    }
+    &__input {
+      padding: 1.5rem 2rem;
+      border: 1px solid #eee;
+      background-color: #fafbff;
+      display: block;
+      border-radius: 1rem;
+      width: 100%;
+      transition: all 0.25s linear;
+      &:focus + .signup-form__check {
+        background-color: $primary;
+        color: #fff;
+      }
+    }
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+      .signup-form__group {
+        width: calc(50% - 1.5rem);
+      }
+    }
+    &__term {
+      margin-top: 2.5rem;
+
+      input {
+        display: none;
+        &:checked + label {
+          &::before {
+            background-color: $primary;
+          }
+          &::after {
+            opacity: 1;
+            visibility: inherit;
+          }
+        }
+      }
+
+      label {
+        position: relative;
+        padding-left: 3rem;
+        cursor: pointer;
+        margin-bottom: 8rem;
+        display: inline-block;
+        &::before {
+          content: "";
+          width: 2rem;
+          height: 2rem;
+          border: 1px solid #eee;
+          background-color: #fafbff;
+          border-radius: 5px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          transition: 0.25s linear;
+        }
+        &::after {
+          content: "";
+          width: 0.5rem;
+          height: 1rem;
+          position: absolute;
+          top: 0;
+          left: 0.7rem;
+          transform: rotate(45deg);
+          border-right: 3px solid #fff;
+          border-bottom: 3px solid #fff;
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+    &__submit {
+      width: 8rem;
+      height: 8rem;
+      color: #fff;
+      border: 0;
+      border-radius: 2.5rem;
+      background-color: $primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0px 20px 9px 0rem rgba(251, 76, 82, 0.123);
+      margin-bottom: 8rem;
+      cursor: pointer;
+    }
+    &__validate {
+      position: relative;
+      .signup-form__input {
+        padding-right: 6rem;
+      }
+    }
+    &__check {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 1rem;
+      background-color: #eee;
+      color: $secondary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      right: 2rem;
+      transform: translateY(-50%);
+    }
+  }
+  &__already {
+    color: $secondary;
+    a {
+      color: $primary;
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+  }
+}
