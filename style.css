@@ -13,6 +13,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 2rem 35rem;
+
 }
 .flex {
   display: flex;
@@ -47,10 +48,14 @@ body {
   color: #fff;
   padding-top: 12rem;
   text-align: center;
+  transition: 0.25s linear;
+
 }
 .content--hidden {
   opacity: 0;
   visibility: hidden;
+  transition: 0.25s linear;
+
 }
 .conten1 {
   width: 30rem;
