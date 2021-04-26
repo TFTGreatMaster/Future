@@ -1,0 +1,259 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+a:hover {
+  color: currentColor;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.ex_header {
+  height: 5.4rem;
+  max-width: 114rem;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
+.ngHidden {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.ndSearch {
+  padding-left: 0;
+  padding-right: 5px;
+}
+
+.pd-right-15 {
+  padding-right: 15px;
+}
+
+#search {
+  margin-top: 9px;
+  position: relative;
+  z-index: 1000;
+}
+
+.pd-0 {
+  padding: 0;
+}
+
+header {
+  background-color: red;
+  position: relative;
+}
+header #ng_lg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 5px 0px;
+}
+header #ex_logo {
+  max-height: 44px;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.area {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.area__btn {
+  font-size: 13px;
+  padding: 7px 0px;
+  width: 80px;
+  background: #eaeaea;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px 0px 0px 5px;
+  cursor: default;
+}
+.area__dropdown {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0px 20px 6px #cccccc7a;
+  border: 1px solid #d3d3d3;
+  background: #fff;
+  font-size: 13px;
+  margin-top: 6px;
+  display: none;
+  border-radius: 5px;
+}
+.area__dropdown::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 35px;
+  left: 10%;
+  border-bottom: 7px solid #d9d9d9;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-width: 7px;
+  border-bottom-color: #fff;
+  margin-left: 1px;
+}
+.area__dropdown-item {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  padding: 6px 10px;
+  transition: 0.25s linear;
+}
+.area__dropdown-item:hover {
+  background-color: #eaeaea;
+  color: inherit;
+}
+.area__dropdown-item i {
+  padding-right: 5px;
+}
+.area:hover > .area__dropdown {
+  display: block;
+}
+
+.search {
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  width: 100%;
+}
+.search__input {
+  padding: 7px 47px 7px 85px;
+  width: 100%;
+  border: 0px;
+  font-size: 13px;
+}
+.search__btn {
+  width: 45px;
+  height: 36px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background: transparent;
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  margin-bottom: 0;
+  height: 5.4rem;
+  color: #fff;
+  position: relative;
+}
+.menu__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 3px 7px 10px 7px;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.3rem;
+  letter-spacing: -1px;
+}
+.menu__item:hover {
+  background-color: #fff;
+  color: #000;
+}
+.menu__item:hover .dropdown {
+  opacity: 1;
+  visibility: inherit;
+}
+.menu__item .dropdown {
+  width: 25rem;
+  top: 100%;
+  position: absolute;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0px 20px 6px #cccccc7a;
+  border: 1px solid #d3d3d3;
+  background: #fff;
+  font-size: 1.3rem;
+  padding: 1rem 0 1rem 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s step-end;
+  border-top: none;
+}
+.menu__item .dropdown__item {
+  color: #494747;
+  padding: 1rem 0;
+}
+.menu__item .dropdown__item:hover {
+  color: red;
+}
+.menu__item .dropdown--longer {
+  width: 67rem;
+  padding: 1rem 0;
+  left: calc(-100% + 2rem);
+  background-color: #fff;
+}
+.menu__item .dropdown--longer__item {
+  padding: 1rem 15px;
+  line-height: 1.7rem;
+  color: #000;
+}
+.menu__item .dropdown--longer__item:hover {
+  color: red;
+}
+.menu__item .dropdown--longer-old {
+  left: calc(-100% - 18.3rem);
+}
+.menu__item .dropdown--longer-repair {
+  left: calc(-100% - 37.2rem);
+}
+.menu__icon {
+  font-size: 2.4rem;
+}
+.menu__text {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=style.css.map */
